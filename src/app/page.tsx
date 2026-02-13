@@ -29,7 +29,10 @@ export default function Home() {
         </div>
         
         <div className="pt-12 border-t border-white/5 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-mono uppercase tracking-[0.4em] text-silk/20">
-          <span>&copy; 2026 CBTDA // Cure Beyond Science Wellness.</span>
+          <div className="flex items-center gap-4">
+            <div className="w-2 h-2 bg-gold animate-pulse rounded-full" />
+            <span>&copy; 2026 CBTDA // Cure Beyond Science Wellness.</span>
+          </div>
           <div className="flex gap-12">
             <a href="#" className="hover:text-gold transition-colors">Lab Results</a>
             <a href="#" className="hover:text-gold transition-colors">Terms</a>
