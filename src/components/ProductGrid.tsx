@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { products } from "@/data/products";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export default function ProductGrid() {
   return (
@@ -21,7 +22,7 @@ export default function ProductGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="gold-border p-10 bg-white/[0.02] flex flex-col justify-between group"
+              className="gold-border p-10 bg-white/[0.02] flex flex-col justify-between group relative"
             >
               <div className="space-y-6">
                 <div className="flex justify-between items-start">
@@ -32,9 +33,11 @@ export default function ProductGrid() {
                 </div>
                 
                 <div className="space-y-2">
-                  <h4 className="text-2xl font-serif tracking-tight group-hover:text-gold transition-colors duration-500">
-                    {product.name}
-                  </h4>
+                  <Link href={`/product/${product.id}`}>
+                    <h4 className="text-2xl font-serif tracking-tight group-hover:text-gold transition-colors duration-500 cursor-pointer">
+                      {product.name}
+                    </h4>
+                  </Link>
                   <p className="text-silk/40 text-sm font-light leading-relaxed">
                     {product.description}
                   </p>
@@ -50,11 +53,18 @@ export default function ProductGrid() {
                 </div>
               </div>
 
-              <Link href="#orders" className="mt-12 w-full">
-                <button className="w-full py-4 border border-gold/30 text-gold text-[10px] font-bold uppercase tracking-[0.3em] group-hover:bg-gold group-hover:text-onyx transition-all duration-500 cursor-pointer">
-                  Inquire
-                </button>
-              </Link>
+              <div className="mt-12 w-full grid grid-cols-2 gap-4">
+                <Link href={`/product/${product.id}`} className="w-full">
+                   <button className="w-full py-4 border border-gold/30 text-gold text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gold hover:text-onyx transition-all duration-500">
+                     Details
+                   </button>
+                </Link>
+                <Link href="#orders" className="w-full">
+                   <button className="w-full py-4 bg-gold/10 text-gold text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gold hover:text-onyx transition-all duration-500">
+                     Inquire
+                   </button>
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>
