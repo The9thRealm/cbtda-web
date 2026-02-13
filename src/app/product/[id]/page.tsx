@@ -39,6 +39,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
         {/* Product Details */}
         <div className="space-y-10">
+          <Link href="/#collection" className="text-[10px] font-mono uppercase tracking-[0.5em] text-gold/40 hover:text-gold transition-colors">
+            ← Back to Apothecary
+          </Link>
           <div className="space-y-4 border-b border-gold/10 pb-8">
             <span className="text-gold font-mono text-xs uppercase tracking-[0.4em]">
               CBTDA // Apothecary
