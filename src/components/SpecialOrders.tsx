@@ -5,7 +5,7 @@ import { Mail, Zap, Droplets } from "lucide-react";
 
 export default function SpecialOrders() {
   return (
-    <section className="py-32 px-6 border-t border-white/5 bg-[#050505]">
+    <section id="orders" className="py-32 px-6 border-t border-white/5 bg-[#050505]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
         {/* Special Orders */}
         <div className="space-y-12">
@@ -36,9 +36,11 @@ export default function SpecialOrders() {
             </div>
           </div>
 
-          <button className="flex items-center gap-4 text-gold font-bold uppercase tracking-[0.4em] text-xs hover:text-white transition-colors duration-500">
-            Request Quote <Mail size={16} />
-          </button>
+          <a href="mailto:trapstarvillain@gmail.com?subject=Special Order Request" className="inline-block">
+            <button className="flex items-center gap-4 text-gold font-bold uppercase tracking-[0.4em] text-xs hover:text-white transition-colors duration-500 cursor-pointer">
+              Request Quote <Mail size={16} />
+            </button>
+          </a>
         </div>
 
         {/* Science/Terpenes focus */}

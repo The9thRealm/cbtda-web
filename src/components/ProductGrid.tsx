@@ -50,9 +50,11 @@ export default function ProductGrid() {
                 </div>
               </div>
 
-              <button className="mt-12 w-full py-4 border border-gold/30 text-gold text-[10px] font-bold uppercase tracking-[0.3em] group-hover:bg-gold group-hover:text-onyx transition-all duration-500">
-                Inquire
-              </button>
+              <Link href="#orders" className="mt-12 w-full">
+                <button className="w-full py-4 border border-gold/30 text-gold text-[10px] font-bold uppercase tracking-[0.3em] group-hover:bg-gold group-hover:text-onyx transition-all duration-500 cursor-pointer">
+                  Inquire
+                </button>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -31,9 +31,11 @@ export default function Hero() {
         </p>
 
         <div className="pt-12">
-          <button className="px-12 py-4 bg-gold text-onyx font-bold uppercase tracking-[0.3em] text-xs hover:bg-gold-light transition-all duration-500 rounded-sm">
-            View The Collection
-          </button>
+          <Link href="#collection">
+            <button className="px-12 py-4 bg-gold text-onyx font-bold uppercase tracking-[0.3em] text-xs hover:bg-gold-light transition-all duration-500 rounded-sm cursor-pointer">
+              View The Collection
+            </button>
+          </Link>
         </div>
       </motion.div>
 
